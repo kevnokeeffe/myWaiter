@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Waiter</string>
+    <string name="home">Home</string>
+    <string name="tableID">Tables</string>
+    <string name="menuID">Notes</string>
+    <string name="newOrder">Orders</string>
+    <string name="menuBar">Notes</string>
+    <string name="table">Tables</string>
+    <string name="menu">Menu</string>
+    <string name="please_type_your_note_s_here" />
+    <string name="save" />
+</resources>

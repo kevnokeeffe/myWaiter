@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waite1"
+    tools:context="ie.mywaiter.mywaiter.CreateOrder"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/viewOrdersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="85dp"
+        android:width="300px"
+        android:height="200px"
+        android:fontFamily="serif"
+        android:onClick="viewOrdersButton"
+        android:text="View Orders"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/createOrder1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:width="300px"
+        android:height="200px"
+        android:fontFamily="serif"
+        android:onClick="createOrder1"
+        android:text="New Order"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/viewOrdersButton"
+        app:layout_constraintStart_toStartOf="@+id/viewOrdersButton" />
+
+</android.support.constraint.ConstraintLayout>

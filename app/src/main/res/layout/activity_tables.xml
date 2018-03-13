@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundTables"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E2EF"
+    tools:context="ie.mywaiter.mywaiter.TablesActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <NumberPicker
+        android:id="@+id/tablePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:layout_marginStart="18dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/enterTable"
+        app:layout_constraintStart_toStartOf="@+id/enterTable"
+        app:layout_constraintTop_toBottomOf="@+id/tableSelectText" />
+
+    <Button
+        android:id="@+id/enterTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="131dp"
+        android:width="200px"
+        android:height="120px"
+        android:fontFamily="serif"
+        android:onClick="donateButtonPressed"
+        android:text="Enter"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablePicker" />
+
+    <TextView
+        android:id="@+id/tableSelectText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="serif"
+        android:text="Select Table Number"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/tablePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
