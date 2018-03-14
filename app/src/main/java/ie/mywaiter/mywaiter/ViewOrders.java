@@ -13,8 +13,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import Adapter.ListViewAdapter;
 import Adapter.MyAdapter;
 import Data.DataBaseHandler;
 import Model.ListItem;
@@ -24,16 +26,18 @@ public class ViewOrders extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
+    private ListViewAdapter adapter;
     private List<Order> orderItems;
     DataBaseHandler db;
+    private String starter, main, desserts, drinks;
 
-public void populateListView(){
-
-    List<Order> cursor = db.getAllOrders();
+    public void populateListView(){
 
 
-}
+        //List<Order> cursor = db.getAllOrders();
+
+
+    }
 
 
 
@@ -42,16 +46,27 @@ public void populateListView(){
         db = new DataBaseHandler(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_orders);
-        recyclerView = (RecyclerView) findViewById(R.id.RecView);
+        recyclerView = (RecyclerView) findViewById(R.id.orderRecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //listView = (ListView) findViewById(R.id.orderList);
 
-       //ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1,numbers);
-       // listView.setAdapter(adapter);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1,numbers);
+        // listView.setAdapter(adapter);
 
         //listView.setOnItemClickListener(this);
-        adapter = new MyAdapter(this, orderItems);
+        orderItems = new ArrayList<>();
+        Intent intent = getIntent();
+        starter = intent.getStringExtra("starter");
+        main = intent.getStringExtra("main");
+        desserts = intent.getStringExtra("desserts");
+        drinks = intent.getStringExtra("drinks");
+
+        for(int i = 0; i < 10; i++){
+            Order meals = new Order(starter, main, desserts, drinks);
+            orderItems.add(meals);
+        }
+        adapter = new ListViewAdapter(this, orderItems);
         recyclerView.setAdapter(adapter);
     }
 
@@ -111,4 +126,6 @@ public void populateListView(){
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

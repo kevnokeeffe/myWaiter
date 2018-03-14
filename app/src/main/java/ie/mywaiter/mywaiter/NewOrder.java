@@ -23,6 +23,7 @@ public class NewOrder extends AppCompatActivity {
     EditText desertWidg;
     EditText drinkWidg;
     Button addOrder1;
+    String starter, main, desert,drink;
 
     //declare data base
     DataBaseHandler db;
@@ -47,7 +48,7 @@ public class NewOrder extends AppCompatActivity {
         //Logging the count
         //Log.d("DB Count: ", String.valueOf(db.getOrderCount()));
         //Insert orders
-       // Log.d("Insert:", "Insertin...");
+        // Log.d("Insert:", "Insertin...");
         //db.addOrder(new Order("Garlic Mushrooms", "Fish of the Day", "Cheesecake", "Coke"));
 
         // Read Back
@@ -62,19 +63,19 @@ public class NewOrder extends AppCompatActivity {
         }
 
         //Get one order
-       // Order oneOrder = db.getOrder(1);
-       // oneOrder.setDrink("Orange");
-      //  oneOrder.setMain("Gougons");
+        // Order oneOrder = db.getOrder(1);
+        // oneOrder.setDrink("Orange");
+        //  oneOrder.setMain("Gougons");
 
         //Update order
-       // int newOrder = db.updateOrder(oneOrder);
+        // int newOrder = db.updateOrder(oneOrder);
 
-       // Log.d(" One Order: ", " Updated Row: "
+        // Log.d(" One Order: ", " Updated Row: "
         //        + String.valueOf(newOrder) +
         //        " Starter: " + oneOrder.getStarter() +
-         //       " Main: " + oneOrder.getMain() +
-         //       " Desert: " + oneOrder.getDesert() +
-         //       " Drink: " + oneOrder.getDrink());
+        //       " Main: " + oneOrder.getMain() +
+        //       " Desert: " + oneOrder.getDesert() +
+        //       " Drink: " + oneOrder.getDrink());
 
 /*
         //delete single order
@@ -85,13 +86,21 @@ public class NewOrder extends AppCompatActivity {
     //when the order button is pressed the string values from the widgets populate the database
     public void addOrderButtonPressed (View view)
     {
-    String starter, main, desert,drink;
-    starter = startWidg.getText().toString();
+
+        starter = startWidg.getText().toString();
         main = mainWidg.getText().toString();
         desert = desertWidg.getText().toString();
         drink = drinkWidg.getText().toString();
-        db.addOrder(new Order(starter,main,desert,drink));
-        Toast.makeText(getApplicationContext(),"Order Added", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(NewOrder.this, ViewOrders.class);
+        intent.putExtra("starter", starter);
+        intent.putExtra("main", main);
+        intent.putExtra("desserts", desert);
+        intent.putExtra("drinks", drink);
+
+        startActivity(intent);
+        //db.addOrder(new Order(starter,main,desert,drink));
+        // Toast.makeText(getApplicationContext(),"Order Added", Toast.LENGTH_SHORT).show();
     }
 
     @Override
