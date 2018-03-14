@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/waite1"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ie.mywaiter.mywaiter.MainActivity"
     tools:layout_editor_absoluteY="81dp"

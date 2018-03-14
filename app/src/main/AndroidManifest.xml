@@ -20,20 +20,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".NotesActivity"
             android:label="@string/menuBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".TablesActivity"
             android:label="@string/table" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".CreateOrder"
             android:label="@string/newOrder" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".MainActivity"
             android:label="@string/home" />
         <activity android:name=".NewOrder"
+            android:screenOrientation="portrait"
             android:label="@string/newOrderActivity"/>
         <activity android:name=".ViewOrders"
+            android:screenOrientation="portrait"
             android:label="@string/viewOrders"></activity>
     </application>
 
