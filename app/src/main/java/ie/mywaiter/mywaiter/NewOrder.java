@@ -99,7 +99,7 @@ public class NewOrder extends AppCompatActivity {
         intent.putExtra("drinks", drink);
 
         startActivity(intent);
-        //db.addOrder(new Order(starter,main,desert,drink));
+        db.addOrder(new Order(starter,main,desert,drink));
         // Toast.makeText(getApplicationContext(),"Order Added", Toast.LENGTH_SHORT).show();
     }
 
