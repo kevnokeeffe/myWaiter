@@ -5,6 +5,98 @@
     android:id="@+id/newOrderID"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.mywaiter.mywaiter.NewOrder">
+    tools:context="ie.mywaiter.mywaiter.NewOrder"
+    tools:layout_editor_absoluteY="81dp">
 
+    <ScrollView
+        android:id="@+id/scrollViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/starter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="78dp"
+                android:ems="10"
+                android:hint="Starter"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/drink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:ems="10"
+                android:hint="Drink"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/desert"
+                app:layout_constraintTop_toBottomOf="@+id/desert" />
+
+            <EditText
+                android:id="@+id/desert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Desert"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/main"
+                app:layout_constraintTop_toBottomOf="@+id/main" />
+
+            <EditText
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:ems="10"
+                android:hint="Main"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/starter"
+                app:layout_constraintTop_toBottomOf="@+id/starter" />
+
+            <Button
+                android:id="@+id/addorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="116dp"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="44dp"
+                android:onClick="addOrderButtonPressed"
+                android:text="Add"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drink" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waite5b" />
+
+    <TextView
+        android:id="@+id/orderText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Make an Order"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

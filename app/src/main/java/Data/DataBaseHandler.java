@@ -5,12 +5,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import Model.Order;
 import Utils.Util;
+import ie.mywaiter.mywaiter.R;
 
 /**
  * Created by Kev on 22/02/2018.
@@ -18,6 +21,9 @@ import Utils.Util;
 
 public class DataBaseHandler extends SQLiteOpenHelper {
 
+private EditText starter;
+
+    EditText listView;
 
     public DataBaseHandler(Context context) {
         super(context, Util.DATABASE_NAME , null, Util.DATEBASE_VERSION);
@@ -26,6 +32,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     //create tables
     @Override
     public void onCreate(SQLiteDatabase db){
+
         //SQL = Structured Query Language
         String CREATE_MENU_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
                 + Util.KEY_ID + " INTEGER PRIMARY KEY,"
@@ -35,7 +42,9 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_MENU_TABLE);
 
+
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

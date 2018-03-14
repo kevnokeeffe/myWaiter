@@ -1,18 +1,58 @@
 package ie.mywaiter.mywaiter;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.List;
+
+import Adapter.MyAdapter;
+import Data.DataBaseHandler;
+import Model.ListItem;
+import Model.Order;
 
 public class ViewOrders extends AppCompatActivity {
 
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private List<Order> orderItems;
+    DataBaseHandler db;
+
+public void populateListView(){
+
+    List<Order> cursor = db.getAllOrders();
+
+
+}
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        db = new DataBaseHandler(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_orders);
+        recyclerView = (RecyclerView) findViewById(R.id.RecView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //listView = (ListView) findViewById(R.id.orderList);
+
+       //ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1,numbers);
+       // listView.setAdapter(adapter);
+
+        //listView.setOnItemClickListener(this);
+        adapter = new MyAdapter(this, orderItems);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
 
 
-            android:background="@drawable/bookmark5"
+            android:background="@drawable/booktab"
             android:orientation="vertical"
             android:visibility="visible">
 
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="14dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
 
                 android:fontFamily="serif"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="4dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="36dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:fontFamily="serif"

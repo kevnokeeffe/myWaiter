@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.List;
@@ -15,12 +18,31 @@ import Model.Order;
 
 public class NewOrder extends AppCompatActivity {
 
+    EditText startWidg;
+    EditText mainWidg;
+    EditText desertWidg;
+    EditText drinkWidg;
+    Button addOrder1;
+
+    //declare data base
+    DataBaseHandler db;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_order);
 
-        DataBaseHandler db = new DataBaseHandler(this);
+        //initialise database
+        db = new DataBaseHandler(this);
+
+        //link widgets to strings
+        startWidg = findViewById(R.id.starter);
+        mainWidg = findViewById(R.id.main);
+        desertWidg = findViewById(R.id.desert);
+        drinkWidg = findViewById(R.id.drink);
+        addOrder1 = findViewById(R.id.addorder);
 
         //Logging the count
         //Log.d("DB Count: ", String.valueOf(db.getOrderCount()));
@@ -58,6 +80,18 @@ public class NewOrder extends AppCompatActivity {
         //delete single order
         db.deleteOrder(oneOrder);
 */
+    }
+
+    //when the order button is pressed the string values from the widgets populate the database
+    public void addOrderButtonPressed (View view)
+    {
+    String starter, main, desert,drink;
+    starter = startWidg.getText().toString();
+        main = mainWidg.getText().toString();
+        desert = desertWidg.getText().toString();
+        drink = drinkWidg.getText().toString();
+        db.addOrder(new Order(starter,main,desert,drink));
+        Toast.makeText(getApplicationContext(),"Order Added", Toast.LENGTH_SHORT).show();
     }
 
     @Override
