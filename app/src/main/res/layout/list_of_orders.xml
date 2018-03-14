@@ -11,47 +11,105 @@
         android:layout_height="wrap_content"
 
         android:layout_marginTop="10dp"
-        >
+        android:id="@+id/cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bookmark"
             android:gravity="center"
+            android:layout_marginLeft="10dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Starter" />
 
             <TextView
                 android:id="@+id/viewStarter"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/viewDesert"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/viewDesert"
+
                 android:text="Starter"
-                />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
 
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Main" />
 
             <TextView
                 android:id="@+id/viewMain"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Main" />
+                android:layout_alignLeft="@+id/viewStarter"
+                android:layout_alignStart="@+id/viewStarter"
+                android:layout_below="@+id/viewStarter"
+                android:fontFamily="serif"
+                android:text="Main"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dessert" />
 
             <TextView
                 android:id="@+id/viewDesert"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Desert" />
+                android:layout_below="@+id/viewMain"
+
+                android:layout_toLeftOf="@+id/viewDrink"
+                android:layout_toStartOf="@+id/viewDrink"
+                android:fontFamily="serif"
+                android:text="Desert"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drink" />
 
             <TextView
                 android:id="@+id/viewDrink"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Drink" />
+                android:layout_alignBaseline="@+id/viewStarter"
+                android:layout_alignBottom="@+id/viewStarter"
+
+
+                android:fontFamily="serif"
+                android:text="Drink"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/deleteOrder"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete" />
         </LinearLayout>
 
 
     </android.support.v7.widget.CardView>
+
 </RelativeLayout>

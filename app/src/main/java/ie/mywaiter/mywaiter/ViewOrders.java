@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -56,19 +57,27 @@ public class ViewOrders extends AppCompatActivity {
 
         //listView.setOnItemClickListener(this);
         orderItems = new ArrayList<>();
+        orderItems = db.getAllOrders();
         Intent intent = getIntent();
-        starter = intent.getStringExtra("starter");
-        main = intent.getStringExtra("main");
-        desserts = intent.getStringExtra("desserts");
-        drinks = intent.getStringExtra("drinks");
+//        starter = intent.getStringExtra("starter");
+//        main = intent.getStringExtra("main");
+//        desserts = intent.getStringExtra("desserts");
+//        drinks = intent.getStringExtra("drinks");
 
-        for(int i = 0; i < 10; i++){
-            Order meals = new Order(starter, main, desserts, drinks);
-            orderItems.add(meals);
-        }
+//        for(int i = 0; i < 10; i++){
+//            Order meals = new Order(starter, main, desserts, drinks);
+//            orderItems.add(meals);
+//        }
         adapter = new ListViewAdapter(this, orderItems);
         recyclerView.setAdapter(adapter);
     }
+
+    /*public void deleteOrderButton(View view){
+
+        db.deleteOrder();
+        Toast.makeText(getApplicationContext(),"Deleted.", Toast.LENGTH_SHORT).show();
+    }*/
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

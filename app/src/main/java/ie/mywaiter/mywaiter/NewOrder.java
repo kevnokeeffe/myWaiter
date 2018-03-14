@@ -83,24 +83,21 @@ public class NewOrder extends AppCompatActivity {
 */
     }
 
+
     //when the order button is pressed the string values from the widgets populate the database
     public void addOrderButtonPressed (View view)
     {
-
-        starter = startWidg.getText().toString();
-        main = mainWidg.getText().toString();
-        desert = desertWidg.getText().toString();
-        drink = drinkWidg.getText().toString();
-
-        Intent intent = new Intent(NewOrder.this, ViewOrders.class);
-        intent.putExtra("starter", starter);
-        intent.putExtra("main", main);
-        intent.putExtra("desserts", desert);
-        intent.putExtra("drinks", drink);
-
-        startActivity(intent);
+//        starter = startWidg.getText().toString();
+//        main = mainWidg.getText().toString();
+//        desert = desertWidg.getText().toString();
+//        drink = drinkWidg.getText().toString();
         db.addOrder(new Order(starter,main,desert,drink));
-        // Toast.makeText(getApplicationContext(),"Order Added", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(NewOrder.this, ViewOrders.class);
+//        intent.putExtra("starter", starter);
+//        intent.putExtra("main", main);
+//        intent.putExtra("desserts", desert);
+//        intent.putExtra("drinks", drink);
+        startActivity(intent);
     }
 
     @Override

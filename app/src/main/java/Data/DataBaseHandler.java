@@ -25,6 +25,7 @@ private EditText starter;
 
     EditText listView;
 
+
     public DataBaseHandler(Context context) {
         super(context, Util.DATABASE_NAME , null, Util.DATEBASE_VERSION);
     }
