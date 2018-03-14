@@ -18,13 +18,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginLeft="10dp"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Starter" />
+                android:text="Starter:" />
 
             <TextView
                 android:id="@+id/viewStarter"
@@ -44,7 +45,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Main" />
+                android:text="Main:" />
 
             <TextView
                 android:id="@+id/viewMain"
@@ -63,7 +64,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dessert" />
+                android:text="Dessert:" />
 
             <TextView
                 android:id="@+id/viewDesert"
@@ -84,7 +85,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Drink" />
+                android:text="Drink:" />
 
             <TextView
                 android:id="@+id/viewDrink"
