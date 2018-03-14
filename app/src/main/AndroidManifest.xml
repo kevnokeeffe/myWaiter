@@ -31,8 +31,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/home" />
-        <activity android:name=".NewOrder" />
-        <activity android:name=".ViewOrders"></activity>
+        <activity android:name=".NewOrder"
+            android:label="@string/newOrderActivity"/>
+        <activity android:name=".ViewOrders"
+            android:label="@string/viewOrders"></activity>
     </application>
 
 </manifest>

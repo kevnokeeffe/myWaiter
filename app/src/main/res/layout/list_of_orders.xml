@@ -21,30 +21,32 @@
 
             <TextView
                 android:id="@+id/viewStarter"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Starter"
-                android:layout_marginStart="20dp"/>
+                />
+
+
 
             <TextView
                 android:id="@+id/viewMain"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Main" />
 
             <TextView
                 android:id="@+id/viewDesert"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desert" />
 
             <TextView
                 android:id="@+id/viewDrink"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Drink" />
         </LinearLayout>

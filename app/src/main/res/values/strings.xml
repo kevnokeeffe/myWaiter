@@ -7,6 +7,8 @@
     <string name="menuBar">Notes</string>
     <string name="table">Tables</string>
     <string name="menu">Menu</string>
+    <string name="viewOrders">View Orders</string>
+    <string name="newOrderActivity">New Order</string>
     <string name="please_type_your_note_s_here" />
     <string name="save" />
 </resources>
