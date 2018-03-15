@@ -20,16 +20,7 @@ public class TablesActivity extends AppCompatActivity {
 
     {
         int amount = tablePicker.getValue();
-       // Log.v("Donate", "Donate Pressed! with amount " + amount);
-        //if(amount == 1){
-        //    Intent table = new Intent(this, SplashScreen.class);
-        //    startActivity(table);
-        //   Toast.makeText(getApplicationContext(),"Table 1.", Toast.LENGTH_SHORT).show();
-        //}
-        //else {
-        //    Intent table = new Intent(this, SplashScreen.class);
-   // startActivity(table);
-       // }
+
         switch (amount){
             case 1:
                 Intent table = new Intent(this, SplashScreen.class);
@@ -84,15 +75,7 @@ public class TablesActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
 
         switch(item.getItemId())
         {

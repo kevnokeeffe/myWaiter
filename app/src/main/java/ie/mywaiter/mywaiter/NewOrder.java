@@ -44,43 +44,18 @@ public class NewOrder extends AppCompatActivity {
         desertWidg = findViewById(R.id.desert);
         drinkWidg = findViewById(R.id.drink);
         addOrder1 = findViewById(R.id.addorder);
-
-        //Logging the count
-        //Log.d("DB Count: ", String.valueOf(db.getOrderCount()));
-        //Insert orders
-        // Log.d("Insert:", "Insertin...");
         //db.addOrder(new Order("Garlic Mushrooms", "Fish of the Day", "Cheesecake", "Coke"));
 
         // Read Back
         Log.d("Reading", "Reading back orders...");
         List<Order> orderList = db.getAllOrders();
 
-        for(Order c : orderList){
-            String log = "ID: "+c.getId()+ " , Starter: " + c.getStarter() + " ,Main: " +c.getMain()
-                    +", Desert: "+c.getDesert()+ ", Drink: "+c.getDrink();
+        for(Order c : orderList) {
+            String log = "ID: " + c.getId() + " , Starter: " + c.getStarter() + " ,Main: " + c.getMain()
+                    + ", Desert: " + c.getDesert() + ", Drink: " + c.getDrink();
 
             Log.d("Name: ", log);
         }
-
-        //Get one order
-        // Order oneOrder = db.getOrder(1);
-        // oneOrder.setDrink("Orange");
-        //  oneOrder.setMain("Gougons");
-
-        //Update order
-        // int newOrder = db.updateOrder(oneOrder);
-
-        // Log.d(" One Order: ", " Updated Row: "
-        //        + String.valueOf(newOrder) +
-        //        " Starter: " + oneOrder.getStarter() +
-        //       " Main: " + oneOrder.getMain() +
-        //       " Desert: " + oneOrder.getDesert() +
-        //       " Drink: " + oneOrder.getDrink());
-
-/*
-        //delete single order
-        db.deleteOrder(oneOrder);
-*/
     }
 
 

@@ -44,17 +44,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/starter" />
 
             <EditText
-                android:id="@+id/drink"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="31dp"
-                android:ems="10"
-                android:hint="Drink"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="@+id/desert"
-                app:layout_constraintTop_toBottomOf="@+id/desert" />
-
-            <EditText
                 android:id="@+id/desert"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,6 +53,17 @@
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="@+id/main"
                 app:layout_constraintTop_toBottomOf="@+id/main" />
+
+            <EditText
+                android:id="@+id/drink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:ems="10"
+                android:hint="Drink"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/desert"
+                app:layout_constraintTop_toBottomOf="@+id/desert" />
 
             <Button
                 android:id="@+id/addorder"

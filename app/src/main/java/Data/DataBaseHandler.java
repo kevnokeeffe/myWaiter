@@ -50,7 +50,7 @@ private EditText starter;
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
 
-        //Deletes table
+        //Drops table
         db.execSQL("DROP TABLE IF EXISTS " +Util.TABLE_NAME);
 
         //CREATE TABLE AGAIN
