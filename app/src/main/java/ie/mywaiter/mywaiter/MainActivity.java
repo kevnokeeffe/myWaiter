@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ListItem object = new ListItem("New","Order");
         ListItem object1 = new ListItem("View","Orders");
-        ListItem object2 = new ListItem("Select","Table");
+        ListItem object2 = new ListItem("Table","Selection");
         ListItem object3 = new ListItem("Menu","Selection");
         ListItem object4 = new ListItem("Make","Notes");
         ListItem object5 = new ListItem("Restart","Application");

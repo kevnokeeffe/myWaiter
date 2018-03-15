@@ -114,14 +114,14 @@ private EditText enterMessage;
             case R.id.home:
                 Intent home = new Intent(this, MainActivity.class);
                 startActivity(home);
-                Toast.makeText(getApplicationContext(),"Life is like photography. You need the negatives to develop.", Toast.LENGTH_SHORT).show();
+
                 break;
 
             case R.id.tableID:
                 //table
                 Intent table = new Intent(this, TablesActivity.class);
                 startActivity(table);
-                Toast.makeText(getApplicationContext(),"If you hit the target every time it’s too near or too big.", Toast.LENGTH_SHORT).show();
+
 
                 break;
 
@@ -136,7 +136,7 @@ private EditText enterMessage;
                 //order
                 Intent orders = new Intent(this, CreateOrder.class);
                 startActivity(orders);
-                Toast.makeText(getApplicationContext(),"I didn’t fail. I just found many ways to do it wrong.", Toast.LENGTH_SHORT).show();
+
                 break;
 
             default:

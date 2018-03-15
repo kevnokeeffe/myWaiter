@@ -23,29 +23,29 @@ public class TablesActivity extends AppCompatActivity {
 
         switch (amount){
             case 1:
-                Intent table = new Intent(this, SplashScreen.class);
-                startActivity(table);
-                Toast.makeText(getApplicationContext(),"Table 1.", Toast.LENGTH_SHORT).show();
+                //Intent table = new Intent(this, SplashScreen.class);
+                //startActivity(table);
+                Toast.makeText(getApplicationContext(),"Table view to be added in version 2.", Toast.LENGTH_LONG).show();
                 break;
             case 2:
-                Intent table2 = new Intent(this, SplashScreen.class);
-                startActivity(table2);
-                Toast.makeText(getApplicationContext(),"Table 2.", Toast.LENGTH_SHORT).show();
+                //Intent table2 = new Intent(this, SplashScreen.class);
+                //startActivity(table2);
+                Toast.makeText(getApplicationContext(),"Table view to be added in version 2.", Toast.LENGTH_LONG).show();
                 break;
             case 3:
-                Intent table3 = new Intent(this, SplashScreen.class);
-                startActivity(table3);
-                Toast.makeText(getApplicationContext(),"Table 3.", Toast.LENGTH_SHORT).show();
+                //Intent table3 = new Intent(this, SplashScreen.class);
+                //startActivity(table3);
+                Toast.makeText(getApplicationContext(),"Table view to be added in version 2.", Toast.LENGTH_LONG).show();
                 break;
             case 4:
-                Intent table4 = new Intent(this, SplashScreen.class);
-                startActivity(table4);
-                Toast.makeText(getApplicationContext(),"Table 4.", Toast.LENGTH_SHORT).show();
+                //Intent table4 = new Intent(this, SplashScreen.class);
+                //startActivity(table4);
+                Toast.makeText(getApplicationContext(),"Table view to be added in version 2.", Toast.LENGTH_LONG).show();
                 break;
             case 5:
-                Intent table5 = new Intent(this, SplashScreen.class);
-                startActivity(table5);
-                Toast.makeText(getApplicationContext(),"Table 5.", Toast.LENGTH_SHORT).show();
+                //Intent table5 = new Intent(this, SplashScreen.class);
+                //startActivity(table5);
+                Toast.makeText(getApplicationContext(),"Table view to be added in version 2.", Toast.LENGTH_LONG).show();
                 break;
             default:
 

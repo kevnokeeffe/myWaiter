@@ -15,14 +15,14 @@ public class CreateOrder extends AppCompatActivity {
 
         Intent startNewActivity = new Intent(this, NewOrder.class);
         startActivity(startNewActivity);
-        Toast.makeText(getApplicationContext(),"Glory is fleeting, but obscurity lasts forever.", Toast.LENGTH_SHORT).show();
+
     }
 
     public void viewOrdersButton(View view){
 
         Intent startNewActivity = new Intent(this, ViewOrders.class);
         startActivity(startNewActivity);
-        Toast.makeText(getApplicationContext(),"Glory is fleeting, but obscurity lasts forever.", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -46,14 +46,14 @@ public class CreateOrder extends AppCompatActivity {
             case R.id.home:
                 Intent home = new Intent(this, MainActivity.class);
                 startActivity(home);
-                Toast.makeText(getApplicationContext(),"When you play, play hard; when you work, don't play at all.", Toast.LENGTH_SHORT).show();
+
                 break;
 
             case R.id.tableID:
                 //table
                 Intent table = new Intent(this, TablesActivity.class);
                 startActivity(table);
-                Toast.makeText(getApplicationContext(),"A diamond is merely a lump of coal that did well under pressure.", Toast.LENGTH_SHORT).show();
+
 
                 break;
 
@@ -61,14 +61,14 @@ public class CreateOrder extends AppCompatActivity {
                 //menu
                 Intent menu = new Intent(this, NotesActivity.class);
                 startActivity(menu);
-                Toast.makeText(getApplicationContext(),"Be like the turtle – at ease in your own shell.", Toast.LENGTH_SHORT).show();
+
                 break;
 
             case R.id.newOrder:
                 //order
                 Intent orders = new Intent(this, CreateOrder.class);
                 startActivity(orders);
-                Toast.makeText(getApplicationContext(),"Failure is the condiment that gives success its flavor.", Toast.LENGTH_SHORT).show();
+
                 break;
 
             default:
