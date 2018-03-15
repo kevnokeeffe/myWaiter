@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, NotesActivity.class);
+                Intent menu = new Intent(this, MenuActivity.class);
                 startActivity(menu);
                 Toast.makeText(getApplicationContext(),"Quality is much better than quantity.", Toast.LENGTH_SHORT).show();
                 break;

@@ -2,7 +2,7 @@
     <string name="app_name">My Waiter</string>
     <string name="home">Home</string>
     <string name="tableID">Tables</string>
-    <string name="menuID">Notes</string>
+    <string name="menuID">Menu</string>
     <string name="newOrder">Orders</string>
     <string name="menuBar">Notes</string>
     <string name="table">Tables</string>
@@ -11,4 +11,24 @@
     <string name="newOrderActivity">New Order</string>
     <string name="please_type_your_note_s_here" />
     <string name="save" />
+
+
+    <string name="soup">Soup</string>
+    <string name="garlicMushrooms">Garlic Mushrooms</string>
+    <string name="wings">BBQ Chicken Wings</string>
+
+    <string name="burger">Gormet Burger</string>
+    <string name="sizzler">Chicken Sizzler</string>
+    <string name="curry">Chicken Curry</string>
+    <string name="pizza">Meat Feast Pizza</string>
+
+    <string name="deathByChocolate">Death By Chocolate</string>
+    <string name="cheesecake">Cheesecake</string>
+    <string name="applePie">Hot Apple Pie</string>
+
+    <string name="coke">Coke</string>
+    <string name="orange">Orange</string>
+    <string name="beer">Beer</string>
+    <string name="wine">Wine</string>
+
 </resources>

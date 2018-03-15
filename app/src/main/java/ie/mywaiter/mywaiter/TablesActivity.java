@@ -11,8 +11,7 @@ import android.widget.NumberPicker;
 
 public class TablesActivity extends AppCompatActivity {
 
-    //private RadioGroup   paymentMethod;
-    //private ProgressBar  progressBar;
+
     private NumberPicker tablePicker;
 
 //This bellow is the code that controles the number picker and where its buttom press navigates too.

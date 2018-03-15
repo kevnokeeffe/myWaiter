@@ -28,7 +28,7 @@ private EditText enterMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_notes);
 
         saveButton = (Button) findViewById(R.id.save);
         enterMessage = (EditText) findViewById(R.id.menuText);

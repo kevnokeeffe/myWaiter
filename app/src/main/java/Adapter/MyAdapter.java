@@ -12,6 +12,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import Model.ListItem;
+import ie.mywaiter.mywaiter.MenuActivity;
 import ie.mywaiter.mywaiter.NotesActivity;
 import ie.mywaiter.mywaiter.NewOrder;
 import ie.mywaiter.mywaiter.R;
@@ -95,13 +96,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 context.startActivity(intent2);
                 break;
             case 3:
-                Intent intent3 = new Intent(context, NotesActivity.class);
-                Toast.makeText(context,"Notes", Toast.LENGTH_SHORT).show();
+                Intent intent3 = new Intent(context, MenuActivity.class);
+                Toast.makeText(context,"Menu", Toast.LENGTH_SHORT).show();
                 context.startActivity(intent3);
                 break;
             case 4:
                 Intent intent4 = new Intent(context, NotesActivity.class);
-                Toast.makeText(context,"Menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Notes", Toast.LENGTH_SHORT).show();
                 context.startActivity(intent4);
                 break;
 
