@@ -102,12 +102,6 @@
                 android:textSize="18sp"
                 android:typeface="serif" />
 
-            <Button
-                android:id="@+id/deleteOrder"
-                android:layout_marginTop="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Delete" />
         </LinearLayout>
 
 
