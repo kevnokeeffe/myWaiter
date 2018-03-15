@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">My Waiter</string>
     <string name="home">Home</string>
     <string name="tableID">Tables</string>
@@ -13,9 +13,22 @@
     <string name="save" />
 
 
+    <string-array name="starter_array">
+        <item>Soup</item>
+        <item>Garlic Mushrooms</item>
+        <item>BBQ Chicken Wings</item>
+        <item>Garlic Bread</item>
+        <item>Salad</item>
+    </string-array>
+
+
+
+
     <string name="soup">Soup</string>
     <string name="garlicMushrooms">Garlic Mushrooms</string>
     <string name="wings">BBQ Chicken Wings</string>
+
+
 
     <string name="burger">Gormet Burger</string>
     <string name="sizzler">Chicken Sizzler</string>

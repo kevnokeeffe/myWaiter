@@ -20,32 +20,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:screenOrientation="portrait"
             android:name=".NotesActivity"
-            android:label="@string/menuBar" />
+            android:label="@string/menuBar"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".TablesActivity"
-            android:label="@string/table" />
+            android:label="@string/table"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".CreateOrder"
-            android:label="@string/newOrder" />
+            android:label="@string/newOrder"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".MainActivity"
-            android:label="@string/home" />
-        <activity android:name=".NewOrder"
-            android:screenOrientation="portrait"
-            android:label="@string/newOrderActivity"/>
-        <activity android:name=".ViewOrders"
-            android:screenOrientation="portrait"
-            android:label="@string/viewOrders"/>
-            <activity
-                android:screenOrientation="portrait"
-                android:name=".MenuActivity"
-                android:label="@string/menuID" >
-        </activity>
+            android:label="@string/home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewOrder"
+            android:label="@string/newOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewOrders"
+            android:label="@string/viewOrders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/menuID"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".LetsMakeAnOrder"></activity>
     </application>
 
 </manifest>
