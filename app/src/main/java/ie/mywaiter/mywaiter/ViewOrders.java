@@ -32,16 +32,6 @@ public class ViewOrders extends AppCompatActivity {
     DataBaseHandler db;
     private String starter, main, desserts, drinks;
 
-    public void populateListView(){
-
-
-        //List<Order> cursor = db.getAllOrders();
-
-
-    }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         db = new DataBaseHandler(this);
@@ -50,33 +40,12 @@ public class ViewOrders extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.orderRecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //listView = (ListView) findViewById(R.id.orderList);
-
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1,numbers);
-        // listView.setAdapter(adapter);
-
-        //listView.setOnItemClickListener(this);
         orderItems = new ArrayList<>();
         orderItems = db.getAllOrders();
         Intent intent = getIntent();
-//        starter = intent.getStringExtra("starter");
-//        main = intent.getStringExtra("main");
-//        desserts = intent.getStringExtra("desserts");
-//        drinks = intent.getStringExtra("drinks");
-
-//        for(int i = 0; i < 10; i++){
-//            Order meals = new Order(starter, main, desserts, drinks);
-//            orderItems.add(meals);
-//        }
         adapter = new ListViewAdapter(this, orderItems);
         recyclerView.setAdapter(adapter);
     }
-
-    /*public void deleteOrderButton(View view){
-
-        db.deleteOrder();
-        Toast.makeText(getApplicationContext(),"Deleted.", Toast.LENGTH_SHORT).show();
-    }*/
 
 
     @Override
@@ -88,15 +57,7 @@ public class ViewOrders extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
 
         switch(item.getItemId())
         {

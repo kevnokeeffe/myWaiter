@@ -19,7 +19,8 @@
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/enterTable"
         app:layout_constraintStart_toStartOf="@+id/enterTable"
-        app:layout_constraintTop_toBottomOf="@+id/tableSelectText" />
+        app:layout_constraintTop_toBottomOf="@+id/tableSelectText"
+        android:layout_marginLeft="18dp" />
 
     <Button
         android:id="@+id/enterTable"
