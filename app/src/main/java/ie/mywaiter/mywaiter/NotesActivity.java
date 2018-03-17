@@ -127,9 +127,9 @@ private EditText enterMessage;
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, NotesActivity.class);
-                startActivity(menu);
-                Toast.makeText(getApplicationContext(),"Fill what’s empty. Empty what’s full.", Toast.LENGTH_SHORT).show();
+                //Intent menu = new Intent(this, NotesActivity.class);
+               // startActivity(menu);
+                Toast.makeText(getApplicationContext(),"Under Construction!!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.newOrder:

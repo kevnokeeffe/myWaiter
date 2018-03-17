@@ -102,6 +102,18 @@
                 android:textSize="18sp"
                 android:typeface="serif" />
 
+            <Button
+                android:id="@+id/updateID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/deleteID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete" />
+
         </LinearLayout>
 
 

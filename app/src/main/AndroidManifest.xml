@@ -46,8 +46,9 @@
         <activity
             android:name=".MenuActivity"
             android:label="@string/menuID"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".LetsMakeAnOrder"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".LetsMakeAnOrder" />
+        <activity android:name=".UpdateOrder"></activity>
     </application>
 
 </manifest>

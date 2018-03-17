@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ie.mywaiter.mywaiter.UpdateOrder">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ie.mywaiter.mywaiter.NewOrder"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:id="@+id/scrollViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <EditText
+                android:id="@+id/starter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="78dp"
+                android:ems="10"
+                android:hint="Starter"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:ems="10"
+                android:hint="Main"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/starter"
+                app:layout_constraintTop_toBottomOf="@+id/starter" />
+
+            <EditText
+                android:id="@+id/desert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Desert"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/main"
+                app:layout_constraintTop_toBottomOf="@+id/main" />
+
+            <EditText
+                android:id="@+id/drink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:ems="10"
+                android:hint="Drink"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/desert"
+                app:layout_constraintTop_toBottomOf="@+id/desert" />
+
+            <Button
+                android:id="@+id/updateOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="116dp"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="44dp"
+
+                android:onClick="updateOrderButtonPressed"
+                android:text="Update Order"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drink" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waite5b" />
+</android.support.constraint.ConstraintLayout>

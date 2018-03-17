@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import Data.DataBaseHandler;
 import Model.ListItem;
+import Model.Order;
 import ie.mywaiter.mywaiter.MenuActivity;
 import ie.mywaiter.mywaiter.NotesActivity;
 import ie.mywaiter.mywaiter.NewOrder;
@@ -27,7 +29,7 @@ import ie.mywaiter.mywaiter.ViewOrders;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private Context context;
     private List<ListItem> listItems;
-
+    DataBaseHandler db;
 
     public MyAdapter(Context context, List listitem){
         this.context = context;
@@ -40,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent, false);
         return new ViewHolder(view);
+
     }
 
     @Override
@@ -86,9 +89,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 context.startActivity(intent);
                 break;
             case 1:
-                Intent intent1 = new Intent(context, ViewOrders.class);
-                Toast.makeText(context,"View Orders", Toast.LENGTH_SHORT).show();
-                context.startActivity(intent1);
+                db = new DataBaseHandler(context);
+                if(db.getAllOrders().size()==0) {
+                    Toast.makeText(context,"Orders Empty", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent intent1 = new Intent(context, ViewOrders.class);
+                    Toast.makeText(context, "View Orders", Toast.LENGTH_SHORT).show();
+                    context.startActivity(intent1);
+                }
                 break;
             case 2:
                 Intent intent2 = new Intent(context, TablesActivity.class);
@@ -96,9 +105,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 context.startActivity(intent2);
                 break;
             case 3:
-                Intent intent3 = new Intent(context, MenuActivity.class);
-                Toast.makeText(context,"Menu", Toast.LENGTH_SHORT).show();
-                context.startActivity(intent3);
+                //Intent intent3 = new Intent(context, MenuActivity.class);
+                Toast.makeText(context,"Under Construction!! Available in Version 2", Toast.LENGTH_LONG).show();
+                //context.startActivity(intent3);
                 break;
             case 4:
                 Intent intent4 = new Intent(context, NotesActivity.class);

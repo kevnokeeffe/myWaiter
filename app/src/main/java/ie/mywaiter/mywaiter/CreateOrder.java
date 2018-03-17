@@ -1,5 +1,6 @@
 package ie.mywaiter.mywaiter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,8 +9,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.List;
+
+import Data.DataBaseHandler;
+import Model.ListItem;
+
 public class CreateOrder extends AppCompatActivity {
 
+
+    DataBaseHandler db;
 
     public void createOrder1(View view){
 
@@ -19,9 +27,15 @@ public class CreateOrder extends AppCompatActivity {
     }
 
     public void viewOrdersButton(View view){
-
-        Intent startNewActivity = new Intent(this, ViewOrders.class);
-        startActivity(startNewActivity);
+        db = new DataBaseHandler(this);
+        if(db.getAllOrders().size()==0) {
+            Toast.makeText(this,"Orders Empty", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Intent intent2 = new Intent(this, ViewOrders.class);
+            Toast.makeText(this, "View Orders", Toast.LENGTH_SHORT).show();
+            this.startActivity(intent2);
+        }
 
     }
 

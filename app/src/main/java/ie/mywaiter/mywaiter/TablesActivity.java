@@ -94,9 +94,9 @@ public class TablesActivity extends AppCompatActivity {
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, NotesActivity.class);
-                startActivity(menu);
-                Toast.makeText(getApplicationContext(),"Never, never, never give up.", Toast.LENGTH_SHORT).show();
+                //Intent menu = new Intent(this, NotesActivity.class);
+                //startActivity(menu);
+                Toast.makeText(getApplicationContext(),"Under Construction!!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.newOrder:

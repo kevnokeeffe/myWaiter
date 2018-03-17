@@ -16,13 +16,15 @@ import java.util.List;
 import Data.DataBaseHandler;
 import Model.Order;
 
-public class NewOrder extends AppCompatActivity {
+public class UpdateOrder extends AppCompatActivity {
 
+
+    Order order ;
     EditText startWidg;
     EditText mainWidg;
     EditText desertWidg;
     EditText drinkWidg;
-    Button addOrder1;
+    Button updateOrder1;
     String starter, main, desert,drink;
 
     //declare data base
@@ -30,51 +32,54 @@ public class NewOrder extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_order);
+        setContentView(R.layout.activity_update_order);
+
 
         //initialise database
         db = new DataBaseHandler(this);
-
+        if (getIntent().hasExtra("OrderID")){
+            String OrderID = getIntent().getExtras().get("OrderID").toString();
+            //converting string to int.
+            order = db.getOrder(Integer.parseInt(OrderID));
+        }
         //link widgets to strings
         startWidg = findViewById(R.id.starter);
         mainWidg = findViewById(R.id.main);
         desertWidg = findViewById(R.id.desert);
         drinkWidg = findViewById(R.id.drink);
-        addOrder1 = findViewById(R.id.addorder);
+        updateOrder1 = findViewById(R.id.updateOrder);
         //db.addOrder(new Order("Garlic Mushrooms", "Fish of the Day", "Cheesecake", "Coke"));
 
-        // Read Back
-        Log.d("Reading", "Reading back orders...");
-        List<Order> orderList = db.getAllOrders();
+        if (order!= null){
+            startWidg.setText(order.getStarter());
+            mainWidg.setText(order.getMain());
+            desertWidg.setText(order.getDesert());
+            drinkWidg.setText(order.getDrink());
 
-        for(Order c : orderList) {
-            String log = "ID: " + c.getId() + " , Starter: " + c.getStarter() + " ,Main: " + c.getMain()
-                    + ", Desert: " + c.getDesert() + ", Drink: " + c.getDrink();
-
-            Log.d("Name: ", log);
         }
+
     }
 
 
     //when the order button is pressed the string values from the widgets populate the database
-    public void addOrderButtonPressed (View view)
+    public void updateOrderButtonPressed (View view)
     {
-
-        String starter = startWidg.getText().toString();
-        String main = mainWidg.getText().toString();
-        String desert = desertWidg.getText().toString();
-        String drink = drinkWidg.getText().toString();
-        if(main!=null && !main.equalsIgnoreCase("")) {
-            db.addOrder(new Order(starter, main, desert, drink));
-            Intent intent = new Intent(NewOrder.this, ViewOrders.class);
+        if(order!=null) {
+            order.setStarter(startWidg.getText().toString());
+            order.setMain(mainWidg.getText().toString());
+            order.setDesert(desertWidg.getText().toString());
+            order.setDrink(drinkWidg.getText().toString());
+            db.updateOrder(order);
+            Toast.makeText(getApplicationContext(),"Order Updated.", Toast.LENGTH_SHORT).show();
+            //finish();
+            Intent intent = new Intent(UpdateOrder.this, ViewOrders.class);
             startActivity(intent);
         }
-        else{
-            Toast.makeText(getApplicationContext(),"Please enter an order", Toast.LENGTH_SHORT).show();
-        }
+
     }
 
     @Override
@@ -105,9 +110,9 @@ public class NewOrder extends AppCompatActivity {
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, NotesActivity.class);
-                startActivity(menu);
-                Toast.makeText(getApplicationContext(),"Quality is much better than quantity.", Toast.LENGTH_SHORT).show();
+                //Intent menu = new Intent(this, NotesActivity.class);
+                //startActivity(menu);
+                Toast.makeText(getApplicationContext(),"Under Construction!!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.newOrder:
@@ -124,4 +129,5 @@ public class NewOrder extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import ie.mywaiter.mywaiter.NewOrder;
 import ie.mywaiter.mywaiter.R;
 import ie.mywaiter.mywaiter.SplashScreen;
 import ie.mywaiter.mywaiter.TablesActivity;
+import ie.mywaiter.mywaiter.UpdateOrder;
 import ie.mywaiter.mywaiter.ViewOrders;
 import android.content.DialogInterface;
 import android.os.Build;
@@ -52,7 +54,18 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         holder.main.setText(order.getMain());
         holder.desert.setText(order.getDesert());
         holder.drink.setText(order.getDrink());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+        holder.updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(context, UpdateOrder.class);
+                myIntent.putExtra("OrderID",order.getId());
+
+                context.startActivity(myIntent);
+
+            }
+        });
+        holder.deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder;
@@ -93,7 +106,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         public TextView main;
         public TextView desert;
         public TextView drink;
-
+        public Button deleteBtn;
+        public Button updateBtn;
         public ViewHolder(View itemView){
 
             super(itemView);
@@ -104,6 +118,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             main = (TextView) itemView.findViewById(R.id.viewMain);
             desert = (TextView) itemView.findViewById(R.id.viewDesert);
             drink = (TextView) itemView.findViewById(R.id.viewDrink);
+            deleteBtn = (Button) itemView.findViewById(R.id.deleteID);
+            updateBtn = (Button) itemView.findViewById(R.id.updateID);
         }
 
 

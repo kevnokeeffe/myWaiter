@@ -56,9 +56,9 @@ public class MenuActivity extends AppCompatActivity {
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, MenuActivity.class);
-                startActivity(menu);
-                Toast.makeText(getApplicationContext(),"Quality is much better than quantity.", Toast.LENGTH_SHORT).show();
+                //Intent menu = new Intent(this, MenuActivity.class);
+                //startActivity(menu);
+                Toast.makeText(getApplicationContext(),"Under Construction!!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.newOrder:
