@@ -73,9 +73,9 @@ public class CreateOrder extends AppCompatActivity {
 
             case R.id.menuID:
                 //menu
-                Intent menu = new Intent(this, NotesActivity.class);
-                startActivity(menu);
-
+               // Intent menu = new Intent(this, NotesActivity.class);
+               // startActivity(menu);
+                Toast.makeText(getApplicationContext(),"Under Construction!!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.newOrder:
